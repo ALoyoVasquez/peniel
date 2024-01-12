@@ -1,44 +1,108 @@
+"use client";
+import SedesCard from "./cardSede";
+import Link from "next/link";
+import QuienesSomos from "../somos/page";
+import GenerosidadesPage from "../generosidades/page";
+
+
 function SedesPage() {
+  const sedes = [
+    {
+      id: 1,
+      nombre: "Independencia",
+      pastores: "Rudy y Damaris de Loyo",
+      direccion: "4ta Av con calles 22 y 23.",
+      avatar:"./Tarjeta_Independencia.png"
+    },
+    {
+      id: 2,
+      nombre: "Camunare",
+      pastores: "Josué y Mariely de Martínez",
+      direccion: "4ta Av con calles 22 y 23.",
+      avatar:"./Tarjeta_Camunare.png"
+    },
+    {
+      id: 3,
+      nombre: "Cocorote",
+      pastores: "Kevin y Siren de Gómez",
+      direccion: "4ta Av con calles 22 y 23.",
+      avatar:"./Tarjeta_Cocorote.png"
+    },
+  ];
+  const sedes2 = [
+    
+    {
+      id: 4,
+      nombre: "Ciudadela",
+      pastores: "Jhonnel y Adisa de Escobar",
+      direccion: "4ta Av con calles 22 y 23.",
+      avatar:"./Tarjeta_Ciudadela.png"
+    },
+    {
+      id: 5,
+      nombre: "Guama",
+      pastores: "Jesús y Yessica de Rojas",
+      direccion: "4ta Av con calles 22 y 23.",
+      avatar:"./Tarjeta_Guama.png"
+    },
+    {
+      id: 6,
+      nombre: "Marroquina",
+      pastores: "Jorge y Yuli de Camacho",
+      direccion: "4ta Av con calles 22 y 23.",
+      avatar:"./Tarjeta_Marroquina.png"
+    },
+    {
+      id: 7,
+      nombre: "San Felipe Sur",
+      pastores: "Carlos y Danelly de López",
+      direccion: "4ta Av con calles 22 y 23.",
+      avatar:"./Tarjeta_SanFelipe.png"
+    },
+  ];
   return (
-    <div className="max-w-sm w-full lg:max-w-full lg:flex">
-      <div
-        className="h-48 lg:h-auto lg:w-48 flex-none bg-[https://t3.ftcdn.net/jpg/03/20/86/12/360_F_320861294_RVQAMjfMpAORnsj0fvJJ6iT8VRkrX5Fp.jpg] bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden "
-        title="Woman holding a mug"
-      ></div>
-      <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-        <div className="mb-8">
-          <p className="text-sm text-gray-600 flex items-center">
-            <svg
-              className="fill-current text-gray-500 w-3 h-3 mr-2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-            </svg>
-            Members only
-          </p>
-          <div className="text-gray-900 font-bold text-xl mb-2">
-            Can coffee make you a better developer?
-          </div>
-          <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
+    <>
+        <QuienesSomos />
+      <main className="flex min-h-screen flex-col items-center justify-between p-2 sm:p-24 ">
+        {/*<div className="container flex justify-between font-bold">
+           <Link href="/" className="text-sm sm:text-lg">
+            Inicio
+          </Link>
+          <Link href="/sedes" className="text-sm sm:text-lg">
+            Sedes
+          </Link>
+        </div> */}
+        
+        <h1 className="font-montserrat text-2xl font-extrabold m-4 mb-8 ">
+          Horarios y Ubicaciones
+        </h1>
+
+        <div className="font-montserrat grid grid-cols-1 w-4/5 px-10 sm:p-2 justify-center content-center  sm:w-5/6 sm:grid-cols-3">
+          {sedes.map((sede) => (
+            <SedesCard
+              key={sede.id}
+              nombre={sede.nombre}
+              pastores={sede.pastores}
+              direccion={sede.direccion}
+              avatar={sede.avatar}
+            />
+          ))}
         </div>
-        <div className="flex items-center">
-          <img
-            className="w-10 h-10 rounded-full mr-4"
-            src="https://t3.ftcdn.net/jpg/03/20/86/12/360_F_320861294_RVQAMjfMpAORnsj0fvJJ6iT8VRkrX5Fp.jpg"
-            alt="Avatar of Jonathan Reinink"
-          />
-          <div className="text-sm">
-            <p className="text-gray-900 leading-none">Jonathan Reinink</p>
-            <p className="text-gray-600">Aug 18</p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 w-4/5 m-2 mb-2 p-2 font-montserrat px-10 sm:p-2 justify-center content-center  sm:w-5/6">
+          
+          {sedes2.map((sede) => (
+            <SedesCard
+              key={sede.id}
+              nombre={sede.nombre}
+              pastores={sede.pastores}
+              direccion={sede.direccion}
+              avatar={sede.avatar}
+            />
+          ))}
         </div>
-      </div>
-    </div>
+      </main>
+      <GenerosidadesPage/>
+    </>
   );
 }
 

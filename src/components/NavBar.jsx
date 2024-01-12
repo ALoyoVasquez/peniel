@@ -7,9 +7,9 @@ const NavBar = () => {
   const { user, isLoading } = useUser();
 
   return (
-    <nav className="container flex  bg-gray-800  ">
+    <nav className="container flex   ">
       <div className="flex flex-1 items-center justify-evenly sm:items-stretch sm:justify-evenly">
-        <div className="flex flex-shrink-0 items-center">
+      {/*   <div className="flex flex-shrink-0 items-center">
           <a
             href="/"
             className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -20,15 +20,15 @@ const NavBar = () => {
               alt="Peniel"
             />
           </a>
-        </div>
+        </div> */}
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">
             {user ? null : (
               <a
                 href="/api/auth/login"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                className=" hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
               >
-                Log In
+                Inicia Sesion
               </a>
             )}
 

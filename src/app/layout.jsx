@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'COCI PENIEL',
   description: 'Peniel somos Todos',
+  icons: {
+    icon: '/cocipeniel.svg',
+  },
 }
 
 // export default function RootLayout({ children }) {

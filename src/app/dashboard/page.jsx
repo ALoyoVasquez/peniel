@@ -1,11 +1,9 @@
-import React from "react";
+import { NextPage } from "next";
+import dynamic from "next/dynamic";
+const AdminApp = dynamic(() => import("@/components/AdminApp"), { ssr: false });
 
-const DashboardPage = () => {
-  return (
-    <section>
-      <h1>DashboardPage</h1>
-    </section>
-  );
+const Dashboard = () => {
+    return <AdminApp />;
 };
 
-export default DashboardPage;
+export default Dashboard;

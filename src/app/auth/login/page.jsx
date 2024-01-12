@@ -14,7 +14,7 @@ function LoginPage() {
   const [error, setError] = useState(null);
 
   const onSubmit = handleSubmit(async (data) => {
-    console.log(data);
+    /* console.log(data);
     const res = await signIn("credentials", {
       email: data.email,
       password: data.password,
@@ -27,7 +27,7 @@ function LoginPage() {
       //window.location.href="/";
     }
 
-    console.log(res);
+    console.log(res); */
   });
 
   return (

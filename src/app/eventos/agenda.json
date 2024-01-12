@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id" : 8,
+      "fecha": "2024-01-03T20:37:11.796Z",
+      "descripcion": "EVento Pasado",
+      "lugar": "Sede Peniel"
+    },
+    {
+      "id" : 1,
+      "fecha": "2024-01-13T20:37:11.796Z",
+      "descripcion": "Entrenamiento Camino a la Generosidad",
+      "lugar": "Sede Peniel"
+    },
+    {
+      "id" : 2,
+      "fecha": "2024-01-20T20:37:11.796Z",
+      "descripcion": "Reunión de Servidores, Todo es Adoración",
+      "lugar": "Sede Peniel"
+    },
+
+    {
+      "id" : 3,
+      "fecha": "2024-01-27T20:37:11.796Z",
+      "descripcion": "24hs Adoración Continua",
+      "lugar": "Sede Peniel"
+    },
+
+    {
+      "id" : 4,
+      "fecha": "2024-02-12T20:37:11.796Z",
+      "descripcion": "Entrenamiento Alcance",
+      "lugar": "Sede Peniel"
+    },
+
+    {
+      "id" : 5,
+      "fecha": "2024-02-17T20:37:11.796Z",
+      "descripcion": "Fiestas de la Generosidades",
+      "lugar": "Sede Peniel"
+    },
+
+    {
+      "id" : 6,
+      "fecha": "2024-02-24T20:37:11.796Z",
+      "descripcion": "Entrenamiento Alineamiento",
+      "lugar": "Sede Peniel"
+    },
+
+    {
+      "id" : 7,
+      "fecha": "2024-02-25T20:37:11.796Z",
+      "descripcion": "Entrenamiento de Servidores",
+      "lugar": "Sede Peniel"
+    }
+    
+  ]
+}
