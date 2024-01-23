@@ -32,13 +32,13 @@ model Users {
 }
 
 model Sede {
-  id          Int    @id @default(autoincrement())
-  name        String
-  address     String
-  phoneNumber String
-  pastores    String
-  imagen      String
-  horarios    String
+  id       Int    @id @default(autoincrement())
+  name     String @unique
+  pastores String
+  address  String
+  email    String
+  imagen   String
+  horarios String
 }
 
 model Evento {
@@ -47,4 +47,22 @@ model Evento {
   dateEvent DateTime
   place     String
   status    String
+}
+
+model EventImg{
+  id   Int      @id @default(autoincrement())
+  imagen String
+}
+
+
+model Voluntariado {
+  id          Int    @id @default(autoincrement())
+  sede        Int
+  titulo      String
+  encargado   String
+  locacion    String
+  tiempo      String
+  descripcion String
+  avatar      String
+  status      String
 }

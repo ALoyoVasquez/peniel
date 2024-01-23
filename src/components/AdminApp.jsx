@@ -13,16 +13,34 @@ import {
 } from "react-icons/fa";
 //! Fin iconos
 
-//? USUARIOS;
-const UsersList = React.lazy(() => import("@/app/dashboard/users/UsersList"));
-//! USUARIOS;
-
 import PanelAdmin from "@/app/dashboard/PanelAdmin";
 import dataProvider from "@/components/dataProvider.js";
+
+//? USUARIOS;
+const UsersList = React.lazy(() => import("@/app/dashboard/users/UsersList"));
+const UserEdit = React.lazy(() => import("@/app/dashboard/users/UserEdit"));
+const createUsers = React.lazy(()=> import("@/app/dashboard/users/createUsers"));
+//! USUARIOS;
+
 //? Eventos
-import createEventos from "@/app/dashboard/eventos/createEventos";
-import EventoList from "@/app/dashboard/eventos/EventosList";
+const createEventos = React.lazy(() => import ("@/app/dashboard/eventos/createEventos"));
+const EventoList = React.lazy(() => import ("@/app/dashboard/eventos/EventosList"));
+
 //! Eventos;
+
+//? Sedes
+const SedesCreate = React.lazy(() => import ("@/app/dashboard/sedes/SedesCreate"));
+const SedesList = React.lazy(() => import ("@/app/dashboard/sedes/SedesList"));
+const SedesEdit = React.lazy(() => import ("@/app/dashboard/sedes/SedesEdit"));
+
+//! Sedes;
+
+//? Voluntariado
+const volunteerList = React.lazy(() => import ("@/app/dashboard/voluntariado/volunteerList"));
+const volunteerEdit = React.lazy(() => import ("@/app/dashboard/voluntariado/volunteerEdit"));
+const volunteerCreate = React.lazy(() => import ("@/app/dashboard/voluntariado/volunteerCreate"));
+
+//! Voluntariado;
 
 /* const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com"); */
 /* const dataProvider = jsonServerProvider("https://localhost:3000/server"); */
@@ -41,8 +59,8 @@ const AdminApp = () => (
       options={{ label: "Usuarios" }}
       name="users"
       list={UsersList}
-      edit={EditGuesser}
-      create={createEventos}
+      edit={UserEdit}
+      create={createUsers}
       recordRepresentation="name"
       icon={FaUserFriends}
     />
@@ -56,15 +74,17 @@ const AdminApp = () => (
     />
     <Resource
       options={{ label: "Sedes" }}
-      name="comments"
-      list={ListGuesser}
-      edit={EditGuesser}
+      name="sedes"
+      create={SedesCreate}
+      list={SedesList}
+      edit={SedesEdit}
       icon={FaChurch}
     />
     <Resource
       options={{ label: "Voluntariado" }}
-      name="volunteer"
-      list={ListGuesser}
+      name="voluntariado"
+      create={volunteerCreate}
+      list={volunteerList}
       edit={EditGuesser}
       icon={FaHandPaper}
     />

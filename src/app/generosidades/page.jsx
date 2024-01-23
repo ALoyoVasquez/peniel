@@ -6,10 +6,10 @@ const GenerosidadesPage = () => {
     <>
       <main className="font-montserrat flex min-h-screen flex-col items-center justify-between p-2 sm:p-8 bg-MidnightBlue text-light-text">
         <div className="container grid grid-cols-1 sm:flex-col font-montserrat w-full">
-          <h1 className="flex justify-center font-montserrat text-4xl font-extrabold m-4 mb-8 p-8">
+          <h1 className="flex justify-center font-montserrat text-4xl font-extrabold m-4 mb-8 p-2 pt-12">
             Generosidades
           </h1>
-          <div className=" grid grid-cols-1 sm:flex m-4 sm:m-8 p-4 sm:p-8">
+          <div className=" grid grid-cols-1 sm:flex m-4 sm:m-8 p-2 sm:p-4">
             <div className="flex-col m-2 sm:m-8 w-5/6 sm:w-1/2">
               <h2 className="font-bold m-4">
                 Generosidad es nuestro privilegio

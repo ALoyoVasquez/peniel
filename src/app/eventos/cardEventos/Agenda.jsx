@@ -1,6 +1,6 @@
 import React from "react";
 
-const Agenda = ({ fecha, descripcion, lugar }) => {
+const Agenda = ({title, fecha, lugar }) => {
   const fechaE = new Date(fecha);
   let mes = "";
   let diaS = "";
@@ -68,15 +68,18 @@ const Agenda = ({ fecha, descripcion, lugar }) => {
   }
 
   return (
-    <div className="flex justify-evenly m-2 p-2">
-      <span className="w-24 font-semibold">
-        {mes} {fechaE.getDate()}{" "}
+    <div className="flex justify-evenly m-1 sm:m-2 p-1 sm:p-2 text-[10px] sm:text-base">
+      <span className="w-12 sm:w-24 font-semibold flex justify-center">
+        {mes}
       </span>
-      <span className="w-4 font-semibold">|</span>
-      <span className="w-24 font-semibold">{diaS}</span>
-      <span className="w-4">|</span> {/* //■ */}
-      <span className="w-96"> {descripcion}</span>
-      <span className="w-4">|</span>
+      <span className="w-5 font-semibold flex justify-center">
+        {fechaE.getDate()}{" "}
+      </span>
+      <span className="w-2 sm:w-4 font-semibold">|</span>
+      <span className="w-12 sm:w-24 font-semibold flex justify-center">{diaS}</span>
+      <span className="w-2 sm:w-4">|</span> {/* //■ */}
+      <span className="w-44 sm:w-96"> {title}</span>
+      <span className="w-2 sm:w-4">|</span>
       <span className="font-semibold">{lugar} </span>
     </div>
   );

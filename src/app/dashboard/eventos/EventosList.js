@@ -1,46 +1,76 @@
+import { useRouter } from "next/navigation";
 import {
-    CreateButton,
-    DatagridConfigurable,
-    ExportButton,
-    FilterButton,
-    List,
-    SelectColumnsButton,
-    TopToolbar,
-    TextInput,
-    TextField,
-    EmailField,
-    ShowButton,
-    EditButton, 
-} from 'react-admin';
+  CreateButton,
+  Button,
+  DatagridConfigurable,
+  ExportButton,
+  FilterButton,
+  List,
+  SelectColumnsButton,
+  TopToolbar,
+  TextInput,
+  TextField,
+  EmailField,
+  ShowButton,
+  EditButton,
+  DateField,
+} from "react-admin";
+import { FaRegCalendarCheck } from "react-icons/fa";
 
-/* const ListActions = () => (
-    <TopToolbar>
-        <SelectColumnsButton />
-        <FilterButton/>
-        <CreateButton label="Crear Usuario"/>
-        <ExportButton label="Exportar"/>
-    </TopToolbar>
-); */
-
-/* const userFilters = [
-    <TextInput label="Nombre" source="name" defaultValue="" />,
-    <TextInput label="Correo" source="email" defaultValue="" />,
-]; */
-
-const EventoList = (props) => (
-        
-        <List {...props} >
-        <DatagridConfigurable>
-            <TextField label="Id" source="id" />
-            <TextField label="Titulo" source="title" />
-            <EmailField label="Lugar" source="place" />
-            <TextField label="Fecha" source = "dateEvent" />
-            <EditButton label="Editar" />
-           {/*  <ShowButton record={props.record} label="Ver" basepath="/customer" /> */}
-        </DatagridConfigurable>
-    </List>
+const Empty = () => (
+  <div className="flex flex-col w-full p-14 font-montserrat text-4xl m-4">
+    <h1 className="flex justify-center m-4 font-bold">
+      Actualmente no hay <br /> Eventos registrados
+    </h1>
+    <FaRegCalendarCheck
+      style={{
+        color: "gray",
+        fontSize: "96px",
+        alignSelf: "center",
+        margin: "16px",
+      }}
+    />
+    <CreateButton
+      label="Agregar Evento"
+      className="flex justify-center bg-LightSlateGray w-auto hover:bg-blue-gray-900 p-24"
+    />
+  </div>
 );
 
+const ListActions = () => {
+  return (
+    <TopToolbar>
+      <SelectColumnsButton />
+      <CreateButton label="Crear Evento" />
+      <ExportButton label="Exportar" />
+    </TopToolbar>
+  );
+};
 
-export default EventoList
- 
+/* const eventFilters = [
+ /*  <TextInput label="Mes" source="month" defaultValue="" />, */
+{
+  /* <TextInput label="Correo" source="email" defaultValue="" />, */
+}
+/* ]; */
+
+const EventoList = (props) => (
+  <List
+    {...props}
+    title={"Eventos - Peniel "}
+    empty={<Empty />}
+    actions={<ListActions />}
+    /*   filters={eventFilters} */
+  >
+    <DatagridConfigurable>
+      <TextField label="Id" source="id" />
+      <TextField label="Titulo" source="title" />
+      <TextField label="Lugar" source="place" />
+      <DateField label="Fecha y Hora" source="dateEvent" showTime />
+      <EditButton label="Editar" />
+      <ShowButton record={props.record} label="Ver" basepath="/eventos" />
+    </DatagridConfigurable>
+  </List>
+);
+
+export default EventoList;

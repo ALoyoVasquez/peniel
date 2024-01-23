@@ -1,34 +1,29 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'COCI PENIEL',
-  description: 'Peniel somos Todos',
+  title: "COCI PENIEL",
+  description: "Peniel somos Todos",
   icons: {
-    icon: '/cocipeniel.svg',
+    icon: "./logoPeniel.svg",
   },
-}
+};
 
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en">
-//       <body className={inter.className}>{children}</body>
-//     </html>
-//   )
-// }
-
-// app/layout.jsx
-import { UserProvider } from '@auth0/nextjs-auth0/client';
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    {/* <UserProvider loginUrl="/server/auth/login" profileUrl="/server/auth/me"> */}
-    <UserProvider>
-      <body>{children}</body>
-    </UserProvider>
+      <head>
+        <title>C.OCI PENIEL</title>
+        <meta name="description" content="Peniel somos Todos" />
+        <link rel="icon" href="./logoPeniel.svg" />
+      </head>
+      <UserProvider>
+        <body>{children}</body>
+      </UserProvider>
     </html>
   );
 }
