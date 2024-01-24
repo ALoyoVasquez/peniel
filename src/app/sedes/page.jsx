@@ -34,6 +34,7 @@ function SedesPage() {
               pastores={sede.pastores}
               direccion={sede.address}
               avatar={sede.imagen}
+              fotoPastores={sede.fotoPastores}
               email={sede.email}
               horario={sede.horario}
             />

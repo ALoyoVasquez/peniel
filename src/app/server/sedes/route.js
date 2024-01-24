@@ -35,6 +35,7 @@ export async function POST(request) {
         email: data.email,
         pastores: data.pastores,
         imagen: data.imagen,
+        fotoPastores: data.fotoPastores,
         horarios: data.horarios,
       },
     });

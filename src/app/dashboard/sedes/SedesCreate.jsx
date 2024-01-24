@@ -38,6 +38,7 @@ const SedesCreate = () => {
         address: data.address,
         email: data.email,
         imagen: data.imagen,
+        fotoPastores: data.fotoPastores,
         horarios: data.horarios,
       }),
       headers: { "Content-Type": "application/json" },
@@ -195,6 +196,24 @@ const SedesCreate = () => {
               required: {
                 value: true,
                 message: "La Imagen para la Nueva Sede es requerida",
+              },
+            })}
+          />
+          <Typography variant="h6" color="blue-gray" className="-mb-3">
+            Foto de los Pastores de la Sede
+          </Typography>
+          <Input
+            type="text"
+            size="lg"
+            placeholder="url"
+            className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+            labelProps={{
+              className: "before:content-none after:content-none",
+            }}
+            {...register("fotoPastores", {
+              required: {
+                value: true,
+                message: "La Foto de los Pastores para la Nueva Sede es requerida",
               },
             })}
           />

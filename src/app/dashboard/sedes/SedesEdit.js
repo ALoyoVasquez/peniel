@@ -35,6 +35,7 @@ const SedesEdit = (props) => (
       <TextInput label="Horarios" source="horarios" className="w-full" />
       <TextInput label="Direccion" source="address" className="w-full" />
       <TextInput label="Imagen" source="imagen" className="w-full" />
+      <TextInput label="Foto Pastores" source="fotoPastores" className="w-full" />
       {/* <PasswordInput source="password" label="Contraseña" /> */}
       <div className="flex justify-evenly w-full ">
         <SaveButton label="Guardar" />

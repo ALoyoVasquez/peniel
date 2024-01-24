@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <main
-        className="font-montserrat flex min-h-screen flex-col items-center justify-between absolute inset-0 m-0 rounded-none bg-none sm:bg-cover bg-center"
+        className="font-montserrat flex min-h-screen flex-col items-center justify-between absolute inset-0 m-0 rounded-none bg-cover sm:bg-cover bg-center"
         style={{
           backgroundImage: `url(${"./Principal_Temporada2024.jpg"})`,
         }}

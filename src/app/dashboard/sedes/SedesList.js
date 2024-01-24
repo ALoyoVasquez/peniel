@@ -64,6 +64,7 @@ const SedesList = (props) => (
       <TextField label="Horarios" source="horarios" />
       <TextField label="Direccion" source="address" />
       <TextField label="Imagen" source="imagen" />
+      <TextField label="Pastores Foto" source="fotoPastores" />
       <EditButton label="Editar" />
       <ShowButton record={props.record} label="Ver" basepath="/sedes" />
     </DatagridConfigurable>
