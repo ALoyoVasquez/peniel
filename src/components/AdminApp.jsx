@@ -42,9 +42,6 @@ const volunteerCreate = React.lazy(() => import ("@/app/dashboard/voluntariado/v
 
 //! Voluntariado;
 
-/* const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com"); */
-/* const dataProvider = jsonServerProvider("https://localhost:3000/server"); */
-
 const AdminApp = () => (
   <Admin
     options={{ label: "Panel" }}
