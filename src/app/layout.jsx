@@ -11,8 +11,6 @@ export const metadata = {
   },
 };
 
-import { UserProvider } from "@auth0/nextjs-auth0/client";
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -21,9 +19,8 @@ export default function RootLayout({ children }) {
         <meta name="description" content="Peniel somos Todos" />
         <link rel="icon" href="./logoPeniel.svg" />
       </head>
-      <UserProvider>
-        <body>{children}</body>
-      </UserProvider>
+
+      <body>{children}</body>
     </html>
   );
 }
