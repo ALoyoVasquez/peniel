@@ -21,3 +21,10 @@ deploy:
   metadata:
     approot: /public
     appentry: .next/server/pages/index.html
+
+
+# ---
+# deployment:
+#   tasks:
+#     - export DEPLOYPATH=/home/example/public_html/
+#     - /bin/cp -R images $DEPLOYPATH
