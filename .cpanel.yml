@@ -20,4 +20,4 @@ deploy:
       - /usr/local/bin/npm run build
   metadata:
     approot: /public
-    # appentry: .next/server/pages/index.html
+    appentry: .next/server/pages/index.html
