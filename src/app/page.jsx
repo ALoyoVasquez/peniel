@@ -1,5 +1,4 @@
 import Link from "next/link";
-import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
@@ -23,13 +22,9 @@ export default function Home() {
           >
             SEDES
           </Link>
-          {/*  <Link href="/login">Log In</Link> */}
         </div>
-        {/* <h1 className="text-4xl font-bold sm:text-6xl text-primary">P  E  N  I  E  L</h1> */}
-        {/* <img src="./Principal_Temporada2024.jpg" alt="bienvenidos" /> */}
-        <section className="font-extrabold w-full  bg-white text-black  text-xs grid sm:flex justify-center sm:justify-center items-center h-20 sm:text-sm ">
-          {/* <div className="m-1 grid items-center justify-center"> */}
 
+        <section className="font-extrabold w-full  bg-white text-black  text-xs grid sm:flex justify-center sm:justify-center items-center h-20 sm:text-sm ">
           <Link
             href="/series"
             className="bg-[#E6E6E6] h-9 hover:bg-[#a9a9a9] bg-opacity-50 rounded-md px-3 py-2 w-40 sm:w-auto m-3 flex justify-center items-center"
@@ -55,7 +50,6 @@ export default function Home() {
           >
             COMIENZA AQUI
           </Link>
-          {/*  </div> */}
         </section>
       </main>
     </>
