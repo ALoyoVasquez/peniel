@@ -1,11 +1,23 @@
+# ---
+# deployment:
+#   tasks:
+#     - chmod 755 ~/repositories
+#     - chmod 755 ~/repositories/cpeniel
+#     - chmod 755 ~/repositories/cpeniel/public
+#     - /opt/cpanel/composer/bin/composer update --optimize-autoloader --no-dev
+#     - /usr/local/bin/php artisan migrate --force
+#     - /usr/local/bin/php artisan config:cache
+#     - /usr/local/bin/php artisan view:cache
+#     - /usr/local/bin/php artisan route:cache
 ---
-deployment:
+deploy:
   tasks:
-    - chmod 755 ~/repositories
-    - chmod 755 ~/repositories/laravel
-    - chmod 755 ~/repositories/laravel/public
-    - /opt/cpanel/composer/bin/composer update --optimize-autoloader --no-dev
-    - /usr/local/bin/php artisan migrate --force
-    - /usr/local/bin/php artisan config:cache
-    - /usr/local/bin/php artisan view:cache
-    - /usr/local/bin/php artisan route:cache
+    - export DEPLOYPATH=/home/cocipeni/repositories/cpeniel
+    - /usr/local/bin/npm install
+    - /usr/local/bin/npx prisma generate
+  hooks:
+    after_sync:
+      - /usr/local/bin/npm run build
+  metadata:
+    approot: /public
+    appentry: .next/server/pages/index.html
